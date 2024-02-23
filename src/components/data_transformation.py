@@ -87,6 +87,7 @@ class DataTransformation:
             df["Delivery_person_Ratings"] = pd.to_numeric(
                 df["Delivery_person_Ratings"]
             ).astype(float)
+            df["Weatherconditions"] = df["Weatherconditions"].str.split().str[1]
 
             ### Swap negative localization to positive
             df["Restaurant_latitude"] = abs(df["Restaurant_latitude"])
@@ -116,7 +117,6 @@ class DataTransformation:
             df = df[
                 [
                     "Delivery_person_Ratings",
-                    "Time_Order_picked",
                     "Weatherconditions",
                     "Road_traffic_density",
                     "Type_of_vehicle",
@@ -176,6 +176,7 @@ class DataTransformation:
             )
 
             train_set = pd.read_csv(self.data_transformation_config.train_data_path)
+            print(df["Type_of_vehicle"].unique())
 
             test_set = pd.read_csv(self.data_transformation_config.test_data_path)
 
