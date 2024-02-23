@@ -50,5 +50,5 @@ if __name__ == "__main__":
         raw_data_path
     )
 
-# modeltrainer = ModelTrainer()
-# print(modeltrainer.initiate_model_trainer(train_arr, test_arr))
+    modeltrainer = ModelTrainer()
+    print(modeltrainer.initiate_model_trainer(train_arr, test_arr))

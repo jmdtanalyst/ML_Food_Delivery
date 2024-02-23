@@ -42,11 +42,11 @@ class ModelTrainer:
             # Dictionary of the models that will compared.
             models = {
                 "Random Forest": RandomForestRegressor(),
-                # "Decision Tree": DecisionTreeRegressor(),
-                # "Gradient Boosting": GradientBoostingRegressor(),
-                # "Linear Regression": LinearRegression(),
-                # "XGBRegressor": XGBRegressor(),
-                # "AdaBoost Regressor": AdaBoostRegressor(),
+                "Decision Tree": DecisionTreeRegressor(),
+                "Gradient Boosting": GradientBoostingRegressor(),
+                "Linear Regression": LinearRegression(),
+                "XGBRegressor": XGBRegressor(),
+                "AdaBoost Regressor": AdaBoostRegressor(),
             }
             params = {
                 "Decision Tree": {

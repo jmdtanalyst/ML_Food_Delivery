@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Exam Performance Indicator</title>
+    
+    <link rel="stylesheet" href="style.css" />
+	<style>
+    html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+  font-family: arial;
+}
+h1 {
+  font-size: 25px;
+}
+h2 {
+  font-size: 21px;
+}
+h3 {
+  font-size: 18px;
+}
+h4 {
+  font-size: 16px;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+input,
+select {
+  vertical-align: middle;
+}
+
+body,
+html {
+  background-color: #fff;
+}
+header {
+  background: #aec6cf;
+  padding: 20px 30px;
+  max-width: 940px;
+  margin: auto;
+}
+
+.features,
+.models {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.github-link,
+.linkedin-link {
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.center {
+  text-align: center;
+  padding: 20px;
+}
+
+nav {
+  padding: 2px 10px;
+  display: flex-end;
+}
+nav ul li a {
+  padding: 2px 10px;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav ul li a:hover {
+  background: #fff;
+}
+nav ul li {
+  margin-left: auto;
+}
+
+.justified {
+  text-align: justify;
+  max-width: 600px;
+  margin: 0 auto;
+}
+#pageContent {
+  max-width: 1000px;
+  margin: auto;
+  border: none;
+}
+main {
+  float: left;
+  width: 60%;
+}
+aside {
+  float: right;
+  width: 30%;
+}
+article {
+  border-bottom: 2px dotted #999;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+article h2 {
+  font-weight: normal;
+  margin-bottom: 12px;
+}
+article p {
+}
+main section {
+}
+footer {
+  background: #aec6cf;
+  max-width: 1000px;
+  margin: auto;
+  clear: both;
+  text-align: right;
+}
+footer p {
+  padding: 20px;
+}
+address {
+  padding: 10px 20px 30px 10px;
+}
+aside > div {
+  margin: 10px auto;
+  background: #aec6cf;
+  min-height: 100px;
+}
+#logo {
+  display: flex;
+  vertical-align: middle;
+  align: center;
+  font-size: 30px;
+  color: #fff;
+}
+body > section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px 0px;
+  border-bottom: 1px solid #999;
+  color: #333;
+}
+
+@media screen and (max-width: 1000px) {
+  body > section {
+    padding: 30px 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  main {
+    float: none;
+    width: 100%;
+  }
+  aside {
+    float: none;
+    width: 100%;
+  }
+}
+
+</style>
+
+  </head>
+
+  <body>
+    <header>
+		
+      <div id="logo">
+    	 Jose Mario Costa    - ML Engineer
+		<nav >
+			<ul>
+			  <li><a href="/">Home</a>
+			  <a href="predict">Prediction</a></li>
+			  
+			</ul>
+		  </nav>
+	</div>
+
+    </header>
+	
+    <section class="center">
+      <strong> <h1>Food Delivery Time Prediction</h1> </strong>
+    </section>
+    <section id="pageContent">
+      <main role="main">
+        <article>
+		<div class"justified">
+			<p>
+			This project aims to predict the Delivery Performance time of food using various factors, such as disitance, wheather conditions, type of order, type of vehicle. 
+			<p>To achieve this, we employed several machine learning models, including random forest, decision tree, gradient boosting, linear regression, XGBoost, CatBoosting, and AdaBoost.
+		</p>
+	</div>
+	</article>
+			<article>
+          <div class="models">
+            <h2>Machine Learning Models Employed</h2>
+            <ul>
+              <li>Random Forest</li>
+              <li>Decision Tree</li>
+              <li>Gradient Boosting</li>
+              <li>Linear Regression</li>
+              <li>XGBoost</li>
+              <li>CatBoosting Regressor</li>
+              <li>AdaBoost Regressor</li>
+            </ul>
+          </div>
+
+          <div class="features">
+            <h2>Features Used for Prediction</h2>
+            <ul>
+              <li>Delivery_person_Ratings</li>
+              <li>multiple_deliveries</li>
+              <li>distance</li>
+              <li>Weatherconditions</li>
+              <li>Road_traffic_density</li>
+              <li>Type_of_vehicle</li>
+              <li>Festival</li>
+              <li>City</li>
+
+            </ul>
+          </div>
+        </article>
+    
+        </div>
+    </div>
+	
+</main>
+      <aside>
+        <div class="github-link">
+			<br>
+			<h3>View the GitHub Repository:</h3>
+			<p>
+			<br>
+			<a href="https://github.com/jmdtanalyst/ML_Food_Delivery">https://github.com/jmdtanalyst/ML_Food_Delivery</a>
+		</div>
+        
+		<div class="linkedin-link">
+			<br>
+			<h3>Connect with me on LinkedIn:</h3>
+			<br>
+			<a href="https://www.linkedin.com/in/jmti">www.linkedin.com/in/jmti</a>
+		</div>
+        <div class="linkedin-link">
+			<br>
+			<h3>My webpage!</h3>
+			<br>
+			<a href="https://jmcloudpro.com">https://jmcloudpro.com</a>
+		</div>
+		
+	<div class='center'>
+		<h3>Check it out!</h3>
+		<p>Select desired parameter and predict the delivery time.</p>
+		
+
+		<h3><a href="predict">Prediction</a></h3>
+
+	</div> 
+      </aside>
+    </section>
+    <footer>
+      <div class='center'>
+      <address>Contact: <a href="mailto:jmcloudpro@gmail.com">Mail me</a></address>
+	  </div>
+    </footer>
+  </body>
+  
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</html>

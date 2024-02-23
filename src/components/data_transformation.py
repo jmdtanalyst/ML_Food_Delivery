@@ -176,7 +176,6 @@ class DataTransformation:
             )
 
             train_set = pd.read_csv(self.data_transformation_config.train_data_path)
-            print(df["Type_of_vehicle"].unique())
 
             test_set = pd.read_csv(self.data_transformation_config.test_data_path)
 

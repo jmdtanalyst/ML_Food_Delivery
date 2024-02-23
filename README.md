@@ -2,6 +2,8 @@
 
 **Unlocking insights into the factors that influences Food Delivery Time.**
 
+You can test this running project here:[(http://mldelivery.jmcloudpro.com:82/](http://mldelivery.jmcloudpro.com:82/).
+
 ## Overview
 
 #### Life cycle of Machine learning Project
@@ -16,7 +18,7 @@
 
 ### 1) Problem statement
 
-- This project understands how long it takes to delivery a food based some caracteristcs.
+- This project aim to predict the delivery time based some caracteristcs.
 
 ### 2) Data Collection
 
