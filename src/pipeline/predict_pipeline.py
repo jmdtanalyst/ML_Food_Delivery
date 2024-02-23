@@ -30,17 +30,29 @@ class PredictPipeline:
 class CustomData:
     def __init__(
         self,
-        Delivery_person_Age: int,
         Delivery_person_Ratings: float,
-        Type_of_order: str,
-        Type_of_vehicle: str,
+        multiple_deliveries: int,
         distance: float,
+        Weatherconditions: str,
+        Road_traffic_density: str,
+        Type_of_vehicle: str,
+        Festival: str,
+        City: str,
     ):
-        self.Delivery_person_Age = Delivery_person_Age
+
         self.Delivery_person_Ratings = Delivery_person_Ratings
-        self.Type_of_order = Type_of_order
-        self.Type_of_vehicle = Type_of_vehicle
+        self.multiple_deliveries = multiple_deliveries
+
         self.distance = distance
+
+        self.Weatherconditions = Weatherconditions
+
+        self.Road_traffic_density = Road_traffic_density
+
+        self.Type_of_vehicle = Type_of_vehicle
+
+        self.Festival = Festival
+        self.City = City
 
     logging.info("def get_data")
 
@@ -48,11 +60,14 @@ class CustomData:
         try:
             logging.info("get_data_as_data_frame")
             custom_data_input_dict = {
-                "Delivery_person_Age": [self.Delivery_person_Age],
                 "Delivery_person_Ratings": [self.Delivery_person_Ratings],
-                "Type_of_order": [self.Type_of_order],
-                "Type_of_vehicle": [self.Type_of_vehicle],
+                "multiple_deliveries": [self.multiple_deliveries],
                 "distance": [self.distance],
+                "Weatherconditions": [self.Weatherconditions],
+                "Road_traffic_density": [self.Road_traffic_density],
+                "Type_of_vehicle": [self.Type_of_vehicle],
+                "Festival": [self.Festival],
+                "City": [self.City],
             }
 
             return pd.DataFrame(custom_data_input_dict)

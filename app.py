@@ -21,14 +21,16 @@ def predict_datapoint():
         return render_template("predict.html")
     else:
         data = CustomData(
-            Delivery_person_Age=request.form.get("Delivery_person_Age"),
             Delivery_person_Ratings=request.form.get("Delivery_person_Ratings"),
-            Type_of_order=request.form.get("Type_of_order"),
-            Type_of_vehicle=request.form.get("Type_of_vehicle"),
+            multiple_deliveries=request.form.get("multiple_deliveries"),
             distance=request.form.get("distance"),
+            Weatherconditions=request.form.get("Weatherconditions"),
+            Road_traffic_density=request.form.get("Road_traffic_density"),
+            Type_of_vehicle=request.form.get("Type_of_vehicle"),
+            Festival=request.form.get("Festival"),
+            City=request.form.get("City"),
         )
         pred_df = data.get_data_as_data_frame()
-        print(pred_df)
 
         predict_pipeline = PredictPipeline()
 
