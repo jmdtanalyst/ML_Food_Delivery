@@ -39,7 +39,7 @@ Food delivery is a courier service in which a restaurant, store, or independent 
 ## Project Structure
 
 - **data/:** Houses the raw dataset and any preprocessed data.
-- **models/:** Stores trained machine learning models.
+- **artifacts/:** Stores trained machine learning models and processed data.
 - **notebooks/:** Includes Jupyter notebooks for data exploration, model training, and analysis.
 - **src/:** Contains Python scripts for data preprocessing, model training, and evaluation.
 - **Dockerfile:** Provides instructions for building the Docker image.
