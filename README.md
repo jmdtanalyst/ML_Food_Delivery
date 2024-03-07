@@ -2,7 +2,8 @@
 
 **Unlocking insights into the factors that influences Food Delivery Time.**
 
-You can test this running project here:[(http://mldelivery.jmcloudpro.com:82/](http://mldelivery.jmcloudpro.com:82/).
+You can test this running project here:[(http://mldelivery.jmcloudpro.com/](http://mldelivery.jmcloudpro.com/).
+
 
 ## Overview
 
